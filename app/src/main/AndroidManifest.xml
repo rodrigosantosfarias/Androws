@@ -1,14 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
- <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
- <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
- <application android:label="Androws" android:theme="@android:style/Theme.Material.NoActionBar" android:usesCleartextTraffic="false" android:icon="@drawable/app_icon">
-  <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTask">
+ <queries><intent><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent></queries>
+ <application android:label="Androws" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:usesCleartextTraffic="false">
+  <activity android:name=".MainActivity" android:exported="true">
    <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.HOME"/><category android:name="android.intent.category.DEFAULT"/></intent-filter>
-   <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
   </activity>
-  <service android:name=".NoticeService" android:label="Androws - notificações" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" android:exported="false">
-   <intent-filter><action android:name="android.service.notification.NotificationListenerService"/></intent-filter>
-  </service>
  </application>
 </manifest>
